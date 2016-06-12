@@ -13,7 +13,7 @@ public class ProgramCaesarCipher {
     /**
      * Method that launches CaeserCipherEncryptor.
      * @param args args[0] - The title of  the file with text to encrypt (String).
-     *             args[1] - The Value of key used for encryption (int).
+     *             args[1] - The Value of key used for encryption (int, positive or negative value).
      */
 
     public static void main(String[] args) {
@@ -25,11 +25,13 @@ public class ProgramCaesarCipher {
         }
         try {
             key = Integer.parseInt(args[1]);
+
         } catch (NumberFormatException e) {
             System.err.println("Drugi argument musi byc liczbą całkowitą");
             System.exit(1);
         }
-
+        while (key < 0) // Można używać ujemnych kluczy. Działania wykonywanywane w modulo 32
+            key +=32 ;
         String buffer = readFile(args[0]); // buffor przechowujący tekst do zaszfrowania
         writeFile(buffer, key);
     }
