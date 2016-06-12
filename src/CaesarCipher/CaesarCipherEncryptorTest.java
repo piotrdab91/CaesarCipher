@@ -1,11 +1,13 @@
+package CaesarCipher;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 /**
- * Testing CaserCipherEncryptor
+ * Tests CaserCipherEncryptor.
  */
-public class CaesarCipherTest {
+public class CaesarCipherEncryptorTest {
     @Test
     public void encrypt() throws Exception {
         CaesarCipherEncryptor Cezar = new CaesarCipherEncryptor();

@@ -1,3 +1,5 @@
+package CaesarCipher;
+
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
@@ -5,9 +7,15 @@ import java.util.Scanner;
 
 
 /**
- *  launch CaeserCipherEncryptor
+ *The main class of the program
  */
 public class ProgramCaesarCipher {
+    /**
+     * Method that launches CaeserCipherEncryptor.
+     * @param args args[0] - The title of  the file with text to encrypt (String).
+     *             args[1] - The Value of key used for encryption (int).
+     */
+
     public static void main(String[] args) {
 
         int key = 0;
@@ -24,13 +32,12 @@ public class ProgramCaesarCipher {
 
         String buffer = readFile(args[0]); // buffor przechowujący tekst do zaszfrowania
         writeFile(buffer, key);
-
     }
 
     /**
-     * reading from file to buffer
-     * @param fileTitle
-     * @return buffer
+     * Reading from file to buffer.
+     * @param fileTitle The title of  the file with text to encrypt.
+     * @return Buffer that stores text to encrypt.
      */
     public static String readFile(String fileTitle) {
         File file = new File(fileTitle);
@@ -46,9 +53,9 @@ public class ProgramCaesarCipher {
     }
 
     /**
-     *  encrypts buffer using a key and write it to the new file
-     * @param inputBuffer
-     * @param key
+     * Encrypts buffer using a key and write it to the new file.
+     * @param inputBuffer Buffer that stores text to encrypt.
+     * @param key The key used for encryption.
      */
 
     public static void writeFile(String inputBuffer, int key) {

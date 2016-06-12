@@ -1,6 +1,6 @@
-
+package CaesarCipher;
 /**
- * Class implementing Caesar Cipher
+ * Class implementing Caesar Cipher Encryptor
  */
 public class CaesarCipherEncryptor {
 
@@ -8,13 +8,13 @@ public class CaesarCipherEncryptor {
     final String ALPHABET_UPPER_CASE = "AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ";
 
     /**
-     * encrypts a polish character in Caeser Cipher using the key.
-     * If sign is not in polish alphabet, method returns this sign
-     * @param sign
-     * @param key
-     * @return encrypting results
+     * Encrypts a Polish character in Caeser Cipher using the key.
+     * If sign is not in Polish alphabet, method returns this sign.
+     * @param sign The sign to encrypt.
+     * @param key  The key used to encrypt.
+     * @return Sign - encrypting results.
      */
-    char encrypt (char sign, int key){
+   public char encrypt (char sign, int key){
      char result=' ';
      if( ! isPolishChar(sign) )
          result = sign;
@@ -34,9 +34,9 @@ public class CaesarCipherEncryptor {
     }
 
     /**
-     * Checking if sign is in polish alphabet
-     * @param sign
-     * @return true if sign is in polish alphabet
+     * Checking if sign is in Polish alphabet.
+     * @param sign The sign to check.
+     * @return True if sign is in Polish alphabet.
      */
 
     public boolean isPolishChar (char sign){
